@@ -92,7 +92,7 @@ function hashPassword($password) {
   return password_hash($password, PASSWORD_DEFAULT);
 }
 
-function newRegistration($firstName, $lastName, $nickname, $dob, $fursuiter, $sponsor, $email, $hash, $country, $rank, $regdate, $list, $efregid, $party) {
+function newRegistration($firstName, $lastName, $nickname, $dob, $fursuiter, $sponsor, $email, $hash, $country, $rank, $regdate, $list, $efregid, $party = 1) {
   global $dbConnection, $config;
 
   try {
@@ -938,7 +938,7 @@ function insertToken($userId) {
   return $token;
 }
 
-function getConfirmedAttendees($choice) {
+function getConfirmedAttendees($choice = 1) {
   global $dbConnection, $config;
   try {
     $sql = "SELECT count(id) as count FROM users WHERE status >= 0 AND `rank` = 0 AND locked = 0 AND party = $choice";
@@ -1013,7 +1013,6 @@ function searchForAttendee($userId, $search) {
             </tr>';
   }
   return $searchResults;
-
 }
 
 function getAttendeesAdmin($userId, $filter) {
@@ -1115,38 +1114,25 @@ function errorStatus($status) {
   session_start();
   $_SESSION['status'] = $status;
   session_commit();
-  header('Location: ../register');
+  header('Location: ../');
   die($status);
 }
 
-function getWaitinglistCount($party = null)
-{
-  global $dbConnection, $config;
+function getWaitinglistCount($party = 1) {
+    global $dbConnection, $config;
 
-  if ($party === null) {
     try {
-      $sql = 'SELECT count(id) as count FROM waitinglist';
-      $stmt = $dbConnection->prepare($sql);
-      $stmt->execute();
-      $row = $stmt->fetch();
+        $sql = 'SELECT count(id) as count FROM waitinglist WHERE party = :party';
+        $stmt = $dbConnection->prepare($sql);
+        $stmt->bindParam(':party', $party);
+        $stmt->execute();
+        $row = $stmt->fetch();
     } catch (PDOException $e) {
-      notifyOnException('Database Select', $config, $sql, $e);
-      return false;
+        notifyOnException('Database Select', $config, $sql, $e);
+        return false;
     }
-  } else {
-    try {
-      $sql = 'SELECT count(id) as count FROM waitinglist WHERE party = :party';
-      $stmt = $dbConnection->prepare($sql);
-      $stmt->bindParam(':party', $party);
-      $stmt->execute();
-      $row = $stmt->fetch();
-    } catch (PDOException $e) {
-      notifyOnException('Database Select', $config, $sql, $e);
-      return false;
-    }
-  }
 
-  return $row['count'];
+    return $row['count'];
 }
 
 function addToWaitinglist($email, $party) {

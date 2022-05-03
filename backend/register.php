@@ -37,17 +37,10 @@ if (!$result->success) {
   die($status);
 }*/
 
-if (empty($_POST['party']) || !in_array($_POST['party'], [1, 2])){
-  $status = 'You must select which party you want to attend.';
-  errorStatus($status);
-} else {
-  $party = $_POST['party'];
-}
-
 $dbConnection = buildDatabaseConnection($config);
 //if (!openSlots() && $_SESSION['secret'] !== $config['secret']) {
-$attendees = getConfirmedAttendees($party);
-if (($attendees === false || $attendees >= $config['attendeesMax'.$party]) && $_SESSION['secret'] !== $config['secret']){
+$attendees = getConfirmedAttendees();
+if (($attendees === false || $attendees >= $config['attendeesMax']) && $_SESSION['secret'] !== $config['secret']){
   $status = 'Sadly we do not have any more slots available for the selected party. But remember to check back in! It might be possible that some slots will free up again.';
   errorStatus($status);
 }
@@ -165,7 +158,7 @@ if (preg_match('/^([A-Za-z0-9 ]*[A-Za-z0-9][A-Za-z0-9 ]*[^A-Za-z0-9 ]?[A-Za-z0-9
   session_start();
   $_SESSION['status'] = $status;
   session_commit();
-  header('Location: ../register');
+  header('Location: ../');
   die($status);
 } else {
     $nickname = substr($nicknamePost, 0, 20);
@@ -231,11 +224,12 @@ if ($dbConnection === false) {
 }
 
 
-$userId = newRegistration($firstName, $lastName, $nickname, $dob, $fursuiter, $sponsor, $email, $hash, $country, 0, time(), $publicList, $efregid, $party);
+$userId = newRegistration($firstName, $lastName, $nickname, $dob, $fursuiter, $sponsor, $email, $hash, $country, 0, time(), $publicList, $efregid);
 if ($userId === false) {
   $status = 'Unknown Error in Registration. Administrator has been notified.';
   errorStatus($status);
 }
+
 $confirmationLink = requestEmailConfirm($userId);
 if ($confirmationLink === false) {
   mail($config['mail'], 'ERROR IN SUMMERBOAT REG URGENT', $userId . ' No token generate possible');

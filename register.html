@@ -1,8 +1,24 @@
+<?php
+require_once('backend/config.php');
+require_once('backend/includes.php');
+require_once('backend/funcs.php');
+
+header('Cache-Control: max-age=0');
+
+if (!empty($_GET['secret'])) {
+    session_start();
+    $_SESSION['secret'] = $_GET['secret'];
+    session_commit();
+    header('Location: /');
+    die();
+}
+
+?>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url=http://reg.summerbo.at/" />
+<meta http-equiv="refresh" content="0; url=https://reg.summerbo.at/" />
 </head>
 <body>
-<p><a href="http://reg.summerbo.at/">Redirect</a></p>
+<p><a href="https://reg.summerbo.at/">Redirect</a></p>
 </body>
 </html>
