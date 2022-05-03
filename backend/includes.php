@@ -102,32 +102,14 @@ $nav = '<nav id="nav" class="nav inactive">
 
         <div class="navLinks">
           <div class="navItem navItemLogo">
-            <a class="navLink" href="/#"><img alt="Summerboat Logo" src="/images/logo@2x.png?v=2020XBbnOXWxGx" width="48">
+            <a class="navLink" href="https://summerbo.at"><img alt="Summerboat Logo" src="/images/logo@2x.png?v=2020XBbnOXWxGx" width="48">
               <p style="margin-left: 1rem; line-height:1;" class="heading5 subheadline nomargin">
               Summerbo.at '.getPartyDate('Y').':<br>
               All Paws on Deck
               </p></a>
           </div>
           <div class="navItem">
-            <a class="navLink" href="/#about">About</a>
-          </div>
-		      <div class="navItem">
-            <a class="navLink" href="/parties">Parties</a>
-          </div>
-          <div class="navItem">
-            <a class="navLink" href="/#tickets">Tickets</a>
-          </div>
-          <div class="navItem">
-            <a class="navLink" href="/#faq">FAQ</a>
-          </div>
-          <div class="navItem">
-            <a class="navLink" href="/#team">Team</a>
-          </div>
-          <div class="navItem">
-            <a class="navLink" href="/attendees" >Attendees</a>
-          </div>
-          <div class="navItem">
-            <a class="navLink" href="/tos#rules" >Conduct</a>
+            <a class="navLink" href="/attendees">Attendees</a>
           </div>
         </div>
         <div class="navButtons">
@@ -149,23 +131,14 @@ $footer = '<section id="footer">
     <div class="footer" style="background-color: var(--colorSecondary); color: white;">
       <div class="wrapper row">
         <div class="content">
-          <h2>Follow Us!</h2>
-          <ul class="blankList textSmall">
-            <li><a class="unselectable flexCentered" href="https://t.me/summerboat" rel="noopener" target="_blank"><i class="la la24 la-paper-plane"></i> @summerboat</a></li>
-            <li><a class="unselectable flexCentered" href="https://twitter.com/summerbo_at" rel="noopener" target="_blank"><i class="la la24 la-twitter-square"></i> @summerbo_at</a></li>
-            <li><a class="unselectable flexCentered" href="mailto:team@summerbo.at" target="_blank"><i class="la la24 la-envelope"></i> team@summerbo.at</a></li>
-      <li><a class="unselectable flexCentered" href="https://t.me/summerboatinfo" rel="noopener" target="_blank"><i class="la la24 la-info"></i> @summerboatinfo</a></li>
-      <li><a class="unselectable flexCentered" href="https://open.spotify.com/user/1131941723/playlist/08YOlrMp5pIcpdrQjEwfig?si=DtMG_0EuTdiHLj8nUvhWIw" rel="noopener" target="_blank"><i class="la la24 la-spotify"></i> Summerbo.at Spotify</a></li>
-          </ul>
           <ul class="blankList textSmall" style="margin-bottom: 2rem">
-            <li><a href="contact" class="unselectable flexCentered" >Contact Us</a></li>
-            <li><a href="/tos#terms" class="unselectable flexCentered">Terms of Service</a></li>
-            <li><a href="/tos#rules" class="unselectable flexCentered">Rules of Conduct</a></li>
-            <li><a href="/tos#privacy" class="unselectable flexCentered">Privacy</a></li>
-            <li><a href="/tos#cookies" class="unselectable flexCentered">Cookies</a></li>
+            <li><a href="https://summerbo.at/terms" class="unselectable flexCentered">Terms of Service</a></li>
+            <li><a href="https://summerbo.at/conduct" class="unselectable flexCentered">Rules of Conduct</a></li>
+            <li><a href="https://summerbo.at/privacy" class="unselectable flexCentered">Privacy</a></li>
+            <li><a href="https://summerbo.at/privacy#cookies" class="unselectable flexCentered">Cookies</a></li>
             <li><a href="https://github.com/datdraggy/summerbo.at" rel="noopener" target="_blank" class="unselectable flexCentered">Source</a></li>
           </ul>
-          <p class="textSmall">Content Copyright &copy; Summerbo.at Organization Group 2018-20</p>
+          <p class="textSmall">Content Copyright &copy; Summerbo.at Organization Group 2018-22</p>
         </div>
       </div>
     </div>
@@ -173,7 +146,7 @@ $footer = '<section id="footer">
 </div> <!-- App -->
 <script>document.addEventListener("DOMContentLoaded", yall);</script>
 <script src="/js/badger-accordion.min.js"></script>
-<script src="/js/app.js?v=2020XBbnOXWxGxdev"></script>
+<script src="/js/app.js?2"></script>
 <!-- Start Cookie Plugin -->
 <script>
   window.cookieconsent_options = {
@@ -184,5 +157,5 @@ $footer = '<section id="footer">
     theme: \'light-floating\'
   };
 </script>
-<script src="/js/cookie-consent/script.js?v=2020XBbnOXWxGxdev"></script>';
+<script src="/js/cookie-consent/script.js?2"></script>';
 //This website uses cookies to fully function. To login, you will have to allow them.
