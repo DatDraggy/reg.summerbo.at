@@ -1,6 +1,6 @@
 <?php
-//Not sure what's happening but ../vendor does not work.
-require '/var/www/reg.summerbo.at/vendor/autoload.php';
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+require_once($root.'/vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

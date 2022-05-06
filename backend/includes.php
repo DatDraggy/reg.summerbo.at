@@ -1,5 +1,6 @@
 <?php
-require_once('backend/funcs.php');
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+require_once($root.'/backend/funcs.php');
 
 $head = '<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
