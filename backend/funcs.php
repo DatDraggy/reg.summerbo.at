@@ -1,5 +1,6 @@
 <?php
-require './vendor/autoload.php';
+//Not sure what's happening but ../vendor does not work.
+require '/var/www/reg.summerbo.at/vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
