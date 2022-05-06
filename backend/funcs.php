@@ -499,7 +499,7 @@ function buildApproveMarkup($userId) {
 function requestApproveMessage($chatId, $userId) {
   $replyMarkup = buildApproveMarkup($userId);
   sendMessage($chatId, "<b>New Registration on summerbo.at!</b>
-<a href=\"https://summerbo.at/admin/view?type=reg&id=$userId\">Regnumber: $userId</a>", json_encode($replyMarkup));
+<a href=\"https://reg.summerbo.at/admin/view?type=reg&id=$userId\">Regnumber: $userId</a>", json_encode($replyMarkup));
 }
 
 function checkPassword($userId, $password) {
