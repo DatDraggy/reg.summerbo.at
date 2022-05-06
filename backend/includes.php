@@ -114,7 +114,7 @@ $nav = '<nav id="nav" class="nav inactive">
         </div>
         <div class="navButtons">
           <div class="navItem">
-            <a class="button navItemButton buttonPrimary" href="/register"><i
+            <a class="button navItemButton buttonPrimary" href="/"><i
                       style="font-size: 24px; margin-right: .5rem; margin-top:-4px;"
                       class="la la-ticket"></i>Register</a>
           </div>

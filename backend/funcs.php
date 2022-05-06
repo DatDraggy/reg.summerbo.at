@@ -1,6 +1,5 @@
 <?php
-require_once('/var/libraries/PHPMailer/PHPMailer.php');
-require_once('/var/libraries/PHPMailer/SMTP.php');
+require './vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
