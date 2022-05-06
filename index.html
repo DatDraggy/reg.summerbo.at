@@ -3,7 +3,7 @@ require_once('backend/config.php');
 require_once('backend/includes.php');
 require_once('backend/funcs.php');
 
-$timeLeft = strtotime($config['startReg'] . 'T11:00:00') - time();
+$timeLeft = strtotime($config['startReg'] . 'T19:00:00') - time();
 
 if ($timeLeft / 60 / 60 / 24 < 2) {
   header('Cache-Control: max-age=0');
@@ -26,7 +26,7 @@ $dbConnection = buildDatabaseConnection($config);
 
 $attendeesMax = $config['attendeesMax'];
 
-$regOpenTime = $regOpen = (strtotime($config['startReg'] . 'T11:00:00') <= time() ? true : false);
+$regOpenTime = $regOpen = (strtotime($config['startReg'] . 'T19:00:00') <= time() ? true : false);
 if ($regOpen === true && $secret !== $config['secret']) {
   $attendees = getConfirmedAttendees();
 
@@ -539,7 +539,7 @@ if ($regOpen === true && $secret !== $config['secret']) {
               <?php } else if (!$regOpenTime) {
                 echo '<div class="formWrapper"><h3>Registration Closed</h3>';
                 if ($config['showTimer']) {
-                  echo '<p>Registration opens on ' . $config['startReg'] . ' 11:00 CET</p>';
+                  echo '<p>Registration opens on ' . $config['startReg'] . ' 19:00 CET</p>';
                 }
                 echo '</div>';
               } ?>
@@ -604,7 +604,7 @@ if ($regOpen === true && $secret !== $config['secret']) {
             showRemaining();
             timer = setInterval(function(){showRemaining()}, 1000);
           }
-          CountDownTimer('<?= $config['startReg'] ?>T11:00:00');
+          CountDownTimer('<?= $config['startReg'] ?>T19:00:00');
         </script>
       <?php } ?>
       <?= $footer ?>
