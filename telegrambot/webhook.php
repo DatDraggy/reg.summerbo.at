@@ -52,12 +52,12 @@ Welcome aboard! Get ready to party with us on our White Pearl just before Eurofu
 Your ticket price is {$config['priceAttendee']} EUR. You will receive an email from Eurofurence regarding the payment. If you're not sure about the due amount, simply login on reg.eurofurence.org. Please follow their instructions on how to pay.
 $vipText
 
-You are now able to login and manage your details on <a href=\"https://summerbo.at\">summerbo.at</a>
+You are now able to login and manage your details on <a href=\"https://reg.summerbo.at\">reg.summerbo.at</a>
 
 After you have paid you will receive a new email from Eurofurence that all outstanding fees have been paid. From then on you are ready to party!
 
 Please help us improve the registration process by participating in the survey below. Thank you in advance!
-<a href=\"https://forms.gle/DVTbzNWfsD7dxKES9\">https://forms.gle/DVTbzNWfsD7dxKES9</a>
+<a href=\"https://forms.gle/6QCFfdorqjxPYrKs8\">https://forms.gle/6QCFfdorqjxPYrKs8</a>
 
 If you have any questions, please send us a message. Simply reply to this e-mail or contact us via Telegram at <a href=\"https://t.me/summerboat\">https://t.me/summerboat</a>.
 ", true);

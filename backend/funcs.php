@@ -277,6 +277,7 @@ Your current status is: {$config['status'][1]} - Registration Number $userId
 
 If you have any questions, please send us a message. Simply reply to this email or contact us via Telegram at <a href=\"https://t.me/summerboat\">https://t.me/summerboat</a>.
 ");
+
       sendStaffNotification($userId);
 
       $sql = "DELETE FROM email_tokens WHERE token = '$token'";
