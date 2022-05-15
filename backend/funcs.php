@@ -285,12 +285,6 @@ If you have any questions, please send us a message. Simply reply to this email 
       $stmt->bindParam(':token', $token);
       $stmt->execute();
     } else {
-      $data = array(
-        'ip' => $_SERVER["HTTP_CF_CONNECTING_IP"],
-        'token' => $token,
-        'server' => $_SERVER
-      );
-      mail($config['mail'], 'Potentially Malicious Reg-Confirm Attempt', print_r($data, true));
       return false;
     }
     $dbConnection->commit();

@@ -10,7 +10,7 @@ $head = '<meta charset="utf-8">
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="summerbo.at" />
 
-    <meta property="og:image" content="https://summerbo.at/images/og-image.jpg">
+    <meta property="og:image" content="https://reg.summerbo.at/images/2022-color-logo.png">
     <meta property="og:image:width" content="1415">
     <meta property="og:image:height" content="741">
 
@@ -25,7 +25,7 @@ $head = '<meta charset="utf-8">
     <meta name="twitter:site" content="@summerbo_at">
     <meta name="twitter:title" content="All Paws on Deck '.getPartyDate('Y').'">
     <meta name="twitter:description" content="All Paws on Deck '.getPartyDate('Y').' &mdash; Summerbo.at is a super awesome furry party, on a boat, in Berlin, at Eurofurence! '.getPartyDate('d F Y').'">
-    <meta name="twitter:image" content="https://summerbo.at/images/og-image.jpg">
+    <meta name="twitter:image" content="https://reg.summerbo.at/images/2022-color-logo.png">
     <meta name="twitter:image:alt" content="Summerbo.at Logo">
     <meta name="twitter:creator" content="@summerbo_at" />
     
