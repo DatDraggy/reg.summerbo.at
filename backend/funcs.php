@@ -1,6 +1,6 @@
 <?php
-$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require_once($root.'/vendor/autoload.php');
+
+require_once('/var/www/reg.summerbo.at/vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
