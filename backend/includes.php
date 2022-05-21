@@ -80,6 +80,7 @@ if ($_SERVER['SERVER_NAME'] !== 'dev.summerbo.at') {
       //require user consent before processing data
       _paq.push(["setExcludedQueryParams", ["token"]]);
       _paq.push([\'requireConsent\']);
+      _paq.push([\'setDomains\', \'*.summerbo.at\']);
       _paq.push([\'trackPageView\']);
       _paq.push([\'enableLinkTracking\']);
       (function() {
