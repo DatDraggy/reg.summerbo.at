@@ -5,9 +5,7 @@ header('Cache-Control: max-age=0');
 
 $dbConnection = buildDatabaseConnection($config);
 
-$party = 1;
-
-$waitinglistCount = getWaitinglistCount($party);
+$waitinglistCount = getWaitinglistCount();
 
 if ($waitinglistCount === false || $waitinglistCount >= 25) {
     $status = 'The waiting list is full. Please check back at a later date.';
@@ -27,12 +25,12 @@ if (filter_var($emailPost, FILTER_VALIDATE_EMAIL)) {
     errorStatus($status);
 }
 
-if (checkWaitinglist($email, $party)) {
+if (checkWaitinglist($email)) {
     $status = 'This email is already on the waitinglist.';
     errorStatus($status);
 }
 
-if (addToWaitinglist($email, $party)) {
+if (addToWaitinglist($email)) {
     $status = 'Success! You will receive an email if there is a spot for you on the boat.';
     session_start();
     $_SESSION['status'] = $status;
