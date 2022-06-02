@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://reg.summerbo.at/</loc>
-        <lastmod>2022-05-03</lastmod>
+        <lastmod>2022-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://reg.summerbo.at/attendees</loc>
+        <lastmod>2022-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://reg.summerbo.at/contact</loc>
+        <lastmod>2022-06-02</lastmod>
+    </url>
+    <url>
+        <loc>https://reg.summerbo.at/login</loc>
+        <lastmod>2022-06-02</lastmod>
     </url>
 </urlset>
