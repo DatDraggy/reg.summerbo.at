@@ -45,17 +45,17 @@ if (($attendees === false || $attendees >= $config['attendeesMax']) && $_SESSION
   errorStatus($status);
 }
 
-if (empty($_POST['firstname'])) {
+if (empty(trim($_POST['firstname']))) {
   $status = 'First Name can\'t be empty.';
   errorStatus($status);
 } else {
-  $firstNamePost = $_POST['firstname'];
+  $firstNamePost = trim($_POST['firstname']);
 }
-if (empty($_POST['lastname'])) {
+if (empty(trim($_POST['lastname']))) {
   $status = 'Last Name can\'t be empty.';
   errorStatus($status);
 } else {
-  $lastNamePost = $_POST['lastname'];
+  $lastNamePost = trim($_POST['lastname']);
 }
 
 
@@ -64,7 +64,7 @@ if (empty($_POST['nickname'])) {
   $status = 'Nickname can\'t be empty.';
   errorStatus($status);
 } else {
-  $nicknamePost = $_POST['nickname'];
+  $nicknamePost = trim($_POST['nickname']);
 }
 if (empty($_POST['efregid']) && !is_int($_POST['efregid'])) {
   $status = 'A valid EF registration is required.';

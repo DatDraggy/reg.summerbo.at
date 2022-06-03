@@ -38,7 +38,7 @@ if (preg_match('/[^\w\-. ~]/', $nicknamePost) === 1) {
   $status = 'Illegal character in Nickname';
   onError($status);
 } else {
-  $nickname = $nicknamePost;
+  $nickname = trim($nicknamePost);
 }
 $newEmailPost = strtolower($_POST['email']);
 if (filter_var($newEmailPost, FILTER_VALIDATE_EMAIL)) {
