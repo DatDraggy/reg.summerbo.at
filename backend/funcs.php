@@ -1130,7 +1130,7 @@ function getWaitinglistCount($party = 1) {
     return $row['count'];
 }
 
-function addToWaitinglist($email, $party) {
+function addToWaitinglist($email, $party = 1) {
   global $dbConnection, $config;
 
   try {
@@ -1146,7 +1146,7 @@ function addToWaitinglist($email, $party) {
   return true;
 }
 
-function checkWaitinglist($email, $party) {
+function checkWaitinglist($email, $party = 1) {
   global $dbConnection, $config;
 
   try {

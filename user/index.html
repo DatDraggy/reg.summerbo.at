@@ -49,12 +49,11 @@ if (!empty($_SESSION['statusSuccess'])) {
 
 session_commit();
 
-$details = getRegDetails($userId, 'nickname, email, sponsor, fursuiter, list, efregid, country, dob, party');
+$details = getRegDetails($userId, 'nickname, email, sponsor, fursuiter, list, efregid, country, dob');
 if ($details == 'Not found') {
   mail($config['mail'], 'Weird Error', 'Uh, this shouldn\'t happen. No details for ' . $userId);
 }
 $nickname = $details['nickname'];
-$party = $details['party'];
 $dob = date('d.m.Y', strtotime($details['dob']));
 $country = $details['country'];
 $email = $details['email'];
