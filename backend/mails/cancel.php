@@ -11,6 +11,10 @@ if (empty($argv[1])) {
   die('Argument 1 Missing');
 }
 $regId = $argv[1];
+if (empty($argv[2])) {
+  die('Reason missing');
+}
+$reason = $argv[2];
 
 try {
   $sql = "INSERT INTO users_deleted SELECT * FROM users WHERE id = $regId";
@@ -46,8 +50,9 @@ if ($stmt->rowCount() === 1) {
   $efregid = $row['efregid'];
 
   try {
-    $sql = "UPDATE users_deleted_reasons SET reason = 'Canceled via Script' WHERE id = $regId AND efregid = $efregid";
-    $stmt = $dbConnection->prepare("UPDATE users_deleted_reasons SET reason = 'Canceled via Script' WHERE id = :regId AND efregid = :efregid");
+    $sql = "UPDATE users_deleted_reasons SET reason = $reason WHERE id = $regId AND efregid = $efregid";
+    $stmt = $dbConnection->prepare("UPDATE users_deleted_reasons SET reason = :reason WHERE id = :regId AND efregid = :efregid");
+    $stmt->bindParam(':reason', $reason);
     $stmt->bindParam(':regId', $regId);
     $stmt->bindParam(':efregid', $efregid);
     $stmt->execute();
@@ -60,7 +65,9 @@ if ($stmt->rowCount() === 1) {
 
 We regret to inform you that your registration has been canceled and deleted.
 
-If you believe this was a mistake, please send us an email. We will inform you about the situation after checking the system. 
+Reason: $reason
+
+If you believe this was a mistake, please send us an email. We will inform you about the situation after checking the system.
 
 In case you have any questions, please send us a message. Reply to this e-mail or contact us via Telegram at <a href=\"https://t.me/summerboat\">https://t.me/summerboat</a>.", true);
 } else {
