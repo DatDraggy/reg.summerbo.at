@@ -134,7 +134,7 @@ $footer = '<section id="footer">
       <div class="wrapper row">
         <div class="content">
           <ul class="blankList textSmall" style="margin-bottom: 2rem">
-            <li><a href="https://summerbo.at/terms" class="unselectable flexCentered">Terms of Service</a></li>
+            <li><a href="https://summerbo.at/tos" class="unselectable flexCentered">Terms of Service</a></li>
             <li><a href="https://summerbo.at/conduct" class="unselectable flexCentered">Rules of Conduct</a></li>
             <li><a href="https://summerbo.at/privacy" class="unselectable flexCentered">Privacy</a></li>
             <li><a href="https://summerbo.at/privacy#cookies" class="unselectable flexCentered">Cookies</a></li>
