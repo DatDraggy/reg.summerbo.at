@@ -129,7 +129,7 @@ if (!empty($_SESSION['status'])) {
 }
 
 $recaptcha = '';
-if (isset($_COOKIE['cookieconsent_dismissed']) && $_COOKIE['cookieconsent_dismissed'] === 'yes') {
+if (isset($_COOKIE['cookieconsent_dismissed3']) && $_COOKIE['cookieconsent_dismissed3'] === 'yes') {
   $recaptcha = '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
 } else {
   $status = 'Please allow cookies and refresh the page. Otherwise you won\'t be able to login.';
@@ -141,7 +141,7 @@ if (isset($_COOKIE['cookieconsent_dismissed']) && $_COOKIE['cookieconsent_dismis
   <title>Login &mdash; All Paws on Deck: Furry Summerbo.at Party</title>
   <?php echo $recaptcha; ?>
   <script>
-    /*if ('yes' === Cookies.get('cookieconsent_dismissed')) {
+    /*if ('yes' === Cookies.get('cookieconsent_dismissed3')) {
       var script = document.createElement('script');
       script.src = 'https://www.google.com/recaptcha/api.js';
       script.createAttribute('async');
